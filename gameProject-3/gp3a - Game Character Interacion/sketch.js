@@ -324,28 +324,38 @@ function draw()
 		// add your standing front facing code
 			// Character Facing Front
 	if (!isLeft && !isRight) {
-		fill(255, 0, 0);
-		rect(gameChar_x - 15, gameChar_y - 55, 30, 50);
-		fill(255, 150, 150);
-		ellipse(gameChar_x, gameChar_y - 55, 40, 40);
-		fill('blue');
-		//left eye
-		ellipse(gameChar_x-8, gameChar_y -55, 5,5)
-		//right eye
-		ellipse(gameChar_x+8, gameChar_y -55, 5,5)
-	
-		//Legs
-		fill(0);
-		//left 
-		rect(gameChar_x - 16, gameChar_y - 10, 10, 10);
-		//Right
-		rect(gameChar_x + 6, gameChar_y - 10, 10, 10);
-		// // Arms
-		// fill('maroon')
-		// //Left arm
-		// rect(gameChar_x - 25, gameChar_y - 35, 10, 20);
-		// // Right Arm 
-		// rect(gameChar_x + 15, gameChar_y - 35, 10, 20);
+		//Standing, facing frontwards
+	var skinColor = color(245,222,179);//Wheat
+	var shirtColor = color(135,206,250) // LightSkyBlue
+	var trouserColor = color(0,0,128) // Navy
+	var shoesColor = color(169,169,169) // DarkGray
+	//head
+	fill(skinColor)
+	rect(gameChar_x-15, gameChar_y-80+2, 30, 28);
+	fill(128,0,0)//maroon
+	rect(gameChar_x-15, gameChar_y-80+2, 30, 7); // hair
+		//eyes whites
+		fill(255);
+		ellipse(gameChar_x-7, gameChar_y-65, 6,4);
+		ellipse(gameChar_x+7, gameChar_y-65, 6,4);
+		//eyes pupil
+		fill (0);
+		ellipse(gameChar_x-7, gameChar_y-65, 3,3);
+		ellipse(gameChar_x+7, gameChar_y-65, 3,3);
+	//body
+	fill(shirtColor); // LightSkyBlue
+	rect(gameChar_x-20, gameChar_y-50, 40, 30);
+	//Legs
+	fill(trouserColor); // Navy
+	rect(gameChar_x-15, gameChar_y-28, 30, 40);
+	//arms 
+	fill(skinColor) // PeachPuff
+	rect(gameChar_x-20, gameChar_y-42, 10, 25); // left
+	rect(gameChar_x+10, gameChar_y-42, 10, 25); // right
+	//feet
+	fill(shoesColor) // DarkGray
+	rect(gameChar_x-15, gameChar_y, 30, 12);
+
 		}
 
 	}
